@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="payment-header">
+    <div class="text-content">
+      Falta pouco! <br>
+      Preencha os dados a seguir para apoiar o projeto.
+    </div>
+  </div>
+  <form class="payment-form">
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <div class="flex-forms">
+      <mat-form-field style="flex: 55%;" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput required>
+      </mat-form-field>
+      <mat-form-field style="flex: 35%;" appearance="fill">
+        <mat-label>CEP</mat-label>
+        <input matInput required>
+      </mat-form-field>
+    </div>
+  </form>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel *ngFor="let method of methods; let i = index" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title style="font-weight: bold;">
+          <mat-radio-button [value]="method" (click)="radioButtonOnClick(method)"></mat-radio-button>
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              <img [src]="getMethodIcon(i)" style="width: 25px; margin-left: 10px;" [alt]="method">
+            </div>
+            <div style="margin-left: 20px;">{{ method }}</div>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section *ngIf="method === 'PIX'">
+        <div>
+          <h3>Sua colaboração somente será confirmada após a transferência PIX. Contamos com seu apoio.</h3>
+          <button>Gerar PIX</button>
+          <div class="pix-alerts">
+            <div class="pix-alerts-item">
+              <img src="assets/images/payments/icons/number-one.png" style="width: 32px;">
+              Abra o app do banco de sua preferência. Escolha a opção pagar com código PIX "copia e cola",
+              ou código QR.
+            </div>
+            <div class="pix-alerts-item">
+              <img src="assets/images/payments/icons/number-two.png" style="width: 32px;">
+              Copie e cole o código, ou escaneie o código QR com a câmera do seu celular. Confira todas as
+              informações e autorize o pagamento.
+            </div>
+            <div class="pix-alerts-item">
+              <img src="assets/images/payments/icons/number-three.png" style="width: 32px;">
+              Você receberá a confirmação do pagamento em seu e-mail.
+            </div>
+            <div>
+              <img src="assets/images/payments/qr-code-sample.svg">
+              O código é válido por 24h.
+            </div>
+            <button>Copiar código do PIX</button>
+          </div>
+        </div>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <app-footer></app-footer>
+</div>

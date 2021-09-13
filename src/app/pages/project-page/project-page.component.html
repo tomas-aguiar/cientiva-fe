@@ -1,0 +1,115 @@
+<div class="container">
+  <img class="image" src="../../../assets/images/projects/estacao-ecologica.png" alt="*">
+  <div class="content">
+    <div class="text-content">
+      <div>
+        <h1 class="cientiva-header">
+          Conservação da biodiversidade urbana - <br> Estação Ecológica da UFMG
+        </h1>
+      </div>
+      <div>
+        <iframe width="852" height="431" src="https://www.youtube.com/embed/XtFZPGVglIw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="margin-top: 25px;"></iframe>
+      </div>
+      <div class="inner-text-content">
+        <h2>O que é o projeto?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="inner-text-content">
+        <h2>Por quê participar desta Cientiva?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="inner-text-content">
+        <h2>Orçamento e cronograma</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="inner-text-content">
+        <h2>Time do projeto</h2>
+        <div class="project-team">
+          <div class="item">
+            <img src="assets/images/projects/img_avatar2.png" alt="Avatar">
+            <h5>Nome da pessoa</h5>
+            Ocupação/Cargo
+          </div>
+          <div class="item">
+            <img src="assets/images/projects/img_avatar2.png" alt="Avatar">
+            <h5>Nome da pessoa</h5>
+            Ocupação/Cargo
+          </div>
+          <div class="item">
+            <img src="assets/images/projects/img_avatar2.png" alt="Avatar">
+            <h5>Nome da pessoa</h5>
+            Ocupação/Cargo
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="empty-content"></div>
+    <div class="card-content">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>R$ 13.852,36</mat-card-title>
+          <mat-card-subtitle>arrecadado</mat-card-subtitle>
+        </mat-card-header>
+        <mat-progress-bar mode="determinate" value="87"></mat-progress-bar>
+        <mat-card-content>
+          <div class="content-mat-card">
+            <div class="content-mat-card-item">
+              357 Cientivos
+            </div>
+            <div class="content-mat-card-item">
+              87% arrecadação
+            </div>
+            <div class="content-mat-card-item">
+              9 dias restantes
+            </div>
+          </div>
+          <h4 style="font-weight: bold; text-align: center; margin-top: 25px;">Cientive esse projeto!</h4>
+        </mat-card-content>
+        <mat-card-actions style="text-align: center">
+          <button *ngFor="let value of donationValues" (click)="router.navigateByUrl('payment')">
+            Apoie com {{ value }}
+          </button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <div class="share-text">
+            Compartilhe essa campanha
+          </div>
+          <div class="share-buttons">
+            <input type="image"
+              class="share-buttons-item"
+              src="assets/images/projects/icons/Facebook.svg"
+              alt="Facebook" style="filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));"
+            />
+            <input type="image"
+                   class="share-buttons-item"
+                   src="assets/images/projects/icons/Group.svg"
+                   alt="Facebook"/>
+            <input type="image"
+                   class="share-buttons-item"
+                   src="assets/images/projects/icons/Whatsapp.svg"
+                   alt="Facebook"/>
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

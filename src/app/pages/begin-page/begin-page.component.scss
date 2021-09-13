@@ -1,0 +1,136 @@
+.container {
+  margin-top: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-carousel-slide {
+  background: rgba(107, 131, 242, 0.6);
+  mix-blend-mode: multiply;
+}
+
+.inner-container {
+  margin-top: 25px;
+}
+
+.header-image {
+  background-image: url("../../../assets/images/estacao-ecologica-ufmg.png");
+  background-size: cover;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: normal;
+}
+
+.first-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.second-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: auto;
+  text-align: right;
+}
+
+mat-progress-bar {
+  height: 10px;
+  box-sizing: border-box;
+  border: 1px solid #C4C4C4;
+  border-radius: 20px;
+}
+
+.money-got {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .arrecadado {
+    height: 32px;
+    width: 96px;
+  }
+
+  .meta {
+    height: 32px;
+    width: 60px;
+  }
+}
+
+mat-card {
+  border-radius: 10px;
+}
+
+mat-card-footer {
+  background: #2EC4B6;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+img {
+  height: 312px;
+  left: -5px;
+  top: -117px;
+}
+
+.card-space {
+  margin: 10px;
+}
+
+.cientiva-header {
+  font-family: Noto Sans, serif;
+  font-style: normal;
+  font-weight: 800;
+  align-items: center;
+  text-align: center;
+}
+
+.cientiva-icon {
+  position: relative;
+  width: 225px;
+  height: 56px;
+  left: 164px;
+  top: 42px;
+}
+
+.cientiva-envie {
+  position: absolute;
+  width: 400px;
+  height: 41px;
+  left: 350px;
+  top: 350px;
+  font-family: Noto Sans, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  align-items: center;
+  color: #FFFFFF;
+  text-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.cientiva-footer {
+  height: 38.9874267578125px;
+  width: 156.64588928222656px;
+
+  left: 17.04%;
+  right: 81.78%;
+  top: 42.1%;
+  bottom: 50.82%;
+}

@@ -1,0 +1,10 @@
+<nav mat-tab-nav-bar backgroundColor="white" class="navigation-bar">
+  <a mat-tab-link *ngFor="let link of links; let i = index"
+     [routerLink]="link.link"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    <section>
+      {{ link.label }}
+    </section>
+  </a>
+</nav>

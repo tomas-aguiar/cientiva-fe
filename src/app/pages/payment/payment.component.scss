@@ -1,0 +1,62 @@
+.container {
+  position: center;
+  height: fit-content;
+  max-width: 1440px;
+  border: 0 solid black;
+  align-items: center;
+
+  .payment-header {
+    background: #6b83f2;
+
+    .text-content {
+      font-family: Noto Sans, serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 65px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+  }
+
+  .payment-form {
+    min-width: 150px;
+    width: 100%;
+    max-width: 1040px;
+    margin: 110px auto;
+    text-align: center;
+
+    .form-field {
+      background: #FFFFFF;
+      border: 0 solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 7px;
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    .flex-forms {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 25px;
+    }
+  }
+}
+
+mat-expansion-panel {
+  background: #E5E5E5;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}

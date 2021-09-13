@@ -1,0 +1,130 @@
+.container {
+  position: center;
+  height: fit-content;
+  max-width: fit-content;
+  border: 0px solid black;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  display: flex;
+  margin-top: 50px;
+  max-width: fit-content;
+  margin-bottom: 50px;
+}
+
+.text-content {
+  flex: 60%;
+  text-align: justify;
+}
+
+.empty-content {
+  flex: 10%;
+}
+
+.card-content {
+  flex: 30%;
+  justify-content: flex-end;
+}
+
+mat-card {
+  max-width: 325px;
+  position: sticky;
+  top: 100px;
+  border-radius: 10px;
+}
+
+mat-card-header {
+  text-align: center;
+}
+
+mat-card-footer {
+  background: #2EC4B6;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+mat-card-actions {
+  button {
+    margin-top: 16px;
+    border: 2px solid #2EC4B6;
+    box-sizing: border-box;
+    border-radius: 22px;
+    background: #FFFFFF;
+    width: 200px;
+    height: 41px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+
+.cientiva-header {
+  font-family: Noto Sans, serif;
+  font-style: normal;
+  font-weight: 800;
+  align-items: center;
+  text-align: center;
+}
+
+.content-mat-card {
+  display: flex;
+}
+
+.content-mat-card-item {
+  margin-top: 25px;
+  flex: 33%;
+}
+.share-buttons-item {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+mat-card-footer {
+  text-align: center;
+}
+
+.share-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inner-text-content {
+  margin-top: 25px;
+}
+
+.project-team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25px;
+
+  .item {
+    flex: 25%;
+    text-align: center;
+
+    img {
+      width: 168px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  }
+}
