@@ -9,8 +9,8 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 })
 export class BeginPageComponent implements OnInit {
   slides = [
-    {image: '../../assets/images/banner-first-pic.png'},
-    {image: '../../assets/images/banner-first-pic.png'},
+    {image: 'assets/images/banner-first-pic.png'},
+    {image: 'assets/images/banner-first-pic.png'},
   ];
 
   constructor(private router: Router) { }
