@@ -60,3 +60,66 @@ mat-expansion-panel {
   justify-content: space-between;
   align-items: center;
 }
+
+.pix-alerts {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .pix-alerts-item {
+    flex: 20%;
+    margin: 37px;
+    display: flex;
+
+    .little-number {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.generate-pix-button {
+  padding: 15px;
+  margin-top: 33px;
+  margin-bottom: 10px;
+  background: #2EC4B6;
+  height: 64px;
+  border-radius: 38px;
+  font-family: Noto Sans, serif;
+  font-style: normal;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  border-width: 0;
+}
+
+.pix-button {
+  margin-top: 25px;
+  background-color: #6b83f2;
+  border-width: 0;
+  border-radius: 38px;
+  width: 218px;
+  height: 42px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+.credit-form-field {
+  border: 0 solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 7px;
+  width: 100%;
+  margin-top: 25px;
+}

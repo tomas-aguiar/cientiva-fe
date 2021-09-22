@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
   <div class="payment-header">
     <div class="text-content">
       Falta pouco! <br>
@@ -6,20 +6,20 @@
     </div>
   </div>
   <form class="payment-form">
-    <mat-form-field class="form-field" appearance="fill">
+    <mat-form-field class="form-field" appearance="outline">
       <mat-label>Nome Completo</mat-label>
       <input matInput required>
     </mat-form-field>
-    <mat-form-field class="form-field" appearance="fill">
+    <mat-form-field class="form-field" appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput required>
     </mat-form-field>
     <div class="flex-forms">
-      <mat-form-field style="flex: 55%;" appearance="fill">
+      <mat-form-field style="flex: 55%;" appearance="outline">
         <mat-label>CPF</mat-label>
         <input matInput required>
       </mat-form-field>
-      <mat-form-field style="flex: 35%;" appearance="fill">
+      <mat-form-field style="flex: 35%;" appearance="outline">
         <mat-label>CEP</mat-label>
         <input matInput required>
       </mat-form-field>
@@ -39,30 +39,129 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
       <section *ngIf="method === 'PIX'">
-        <div>
-          <h3>Sua colaboração somente será confirmada após a transferência PIX. Contamos com seu apoio.</h3>
-          <button>Gerar PIX</button>
+        <div style="text-align: center;">
+          <div>
+            <h3>Sua colaboração somente será confirmada após a transferência PIX. Contamos com seu apoio.</h3>
+          </div>
+          <div>
+            <button class="generate-pix-button">Gerar Pix</button>
+          </div>
           <div class="pix-alerts">
             <div class="pix-alerts-item">
-              <img src="assets/images/payments/icons/number-one.png" style="width: 32px;">
+              <img src="assets/images/payments/icons/number-one.png" class="little-number" alt="*">
               Abra o app do banco de sua preferência. Escolha a opção pagar com código PIX "copia e cola",
               ou código QR.
             </div>
             <div class="pix-alerts-item">
-              <img src="assets/images/payments/icons/number-two.png" style="width: 32px;">
+              <img src="assets/images/payments/icons/number-two.png" class="little-number" alt="*">
               Copie e cole o código, ou escaneie o código QR com a câmera do seu celular. Confira todas as
               informações e autorize o pagamento.
             </div>
             <div class="pix-alerts-item">
-              <img src="assets/images/payments/icons/number-three.png" style="width: 32px;">
+              <img src="assets/images/payments/icons/number-three.png" class="little-number" alt="*">
               Você receberá a confirmação do pagamento em seu e-mail.
             </div>
-            <div>
-              <img src="assets/images/payments/qr-code-sample.svg">
-              O código é válido por 24h.
-            </div>
-            <button>Copiar código do PIX</button>
           </div>
+          <div>
+            <img src="assets/images/payments/qr-code-sample.svg" alt="*">
+            <p style="margin-top: 5px;">O código é válido por 24h.</p>
+          </div>
+          <button class="pix-button">Copiar código do PIX</button>
+        </div>
+      </section>
+      <section *ngIf="method === 'Cartão de Crédito'">
+        <div style="text-align: center;">
+          <form class="payment-form">
+            <mat-form-field class="credit-form-field" appearance="outline">
+              <mat-label>Número</mat-label>
+              <input matInput required>
+            </mat-form-field>
+            <mat-form-field class="credit-form-field" appearance="outline">
+              <mat-label>Nome do titular</mat-label>
+              <input matInput required>
+            </mat-form-field>
+            <div class="flex-forms">
+              <mat-form-field style="flex: 30%;" appearance="outline">
+                <mat-label>Mês e Ano</mat-label>
+                <input matInput [matDatepicker]="dp" [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                <mat-datepicker #dp
+                                startView="multi-year"
+                                (yearSelected)="chosenYearHandler($event)"
+                                (monthSelected)="chosenMonthHandler($event, dp)"
+                                panelClass="example-month-picker">
+                </mat-datepicker>
+              </mat-form-field>
+              <mat-form-field style="flex: 30%;" appearance="outline">
+                <mat-label>Código de segurança</mat-label>
+                <input matInput required>
+              </mat-form-field>
+              <div style="flex: 30%; display: flex">
+                <img src="assets/images/payments/icons/card.png" style="width: 54px; height: 49px;" alt="*">
+                <p>Código de segurança de 3 dígitos, impresso no verso do cartão.</p>
+              </div>
+            </div>
+            <mat-form-field class="credit-form-field" appearance="outline">
+              <mat-label>Parcelas</mat-label>
+              <mat-select>
+                <mat-option value="one">À vista</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div style="margin-top: 25px;">
+              <button class="generate-pix-button">Pagar com cartão de crédito</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section *ngIf="method === 'Cartão de Débito'">
+        <div style="text-align: center;">
+          <form class="payment-form">
+            <mat-form-field class="credit-form-field" appearance="outline">
+              <mat-label>Número</mat-label>
+              <input matInput required>
+            </mat-form-field>
+            <mat-form-field class="credit-form-field" appearance="outline">
+              <mat-label>Nome do titular</mat-label>
+              <input matInput required>
+            </mat-form-field>
+            <div class="flex-forms">
+              <mat-form-field style="flex: 30%;" appearance="outline">
+                <mat-label>Código de segurança</mat-label>
+                <input matInput required>
+              </mat-form-field>
+              <div style="flex: 30%; display: flex">
+                <img src="assets/images/payments/icons/card.png" style="width: 54px; height: 49px;" alt="*">
+                <p>Código de segurança de 3 dígitos, impresso no verso do cartão.</p>
+              </div>
+            </div>
+            <div style="margin-top: 25px;">
+              <button class="generate-pix-button">Pagar com cartão de débito</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section *ngIf="method === 'Boleto Bancário'">
+        <div style="text-align: center;">
+          <div>
+            <h3>Sua colaboração somente será confirmada após o pagamento do boleto. Contamos com seu apoio.</h3>
+          </div>
+          <div>
+            <button class="generate-pix-button">Gerar Boleto</button>
+          </div>
+          <div>
+            <p>Obrigado por participar da campanha!</p>
+            <p>Você pode imprimir o boleto bancário no botão abaixo ou copiar e colar o código de barras:</p>
+          </div>
+            Código de Barras do Boleto:
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <p style="font-weight: bold; font-size: 20px;">23791.22928 50008.833472 48000.046903 3 87260000001500</p>
+            <img src="assets/images/payments/icons/copy.png" style="width: 20px;" alt="*">
+          </div>
+          <button class="pix-button">Imprimir Boleto</button>
+          <p style="margin-top: 25px;">
+            Só serão aceitos valores de pagamento igual ao do boleto gerado. Para apoiar com outro valor,
+            realize uma nova colaboração .
+          </p>
         </div>
       </section>
     </mat-expansion-panel>

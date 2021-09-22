@@ -28,8 +28,11 @@ import { PaymentComponent } from './pages/payment/payment.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatOptionModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatRadioModule,
     MatListModule,
     FormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatDatepickerModule,
+    ReactiveFormsModule
   ],
   providers: [MatTabNav],
   bootstrap: [AppComponent]
