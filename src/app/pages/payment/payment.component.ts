@@ -12,6 +12,8 @@ import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 // @ts-ignore
 import {default as _rollupMoment, Moment} from 'moment';
+import {MatDialog} from '@angular/material/dialog';
+import {ThankYouModalComponent} from './thank-you-modal/thank-you-modal.component';
 
 const moment = _rollupMoment || _moment;
 
@@ -47,7 +49,7 @@ export const MY_FORMATS = {
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   methods: string[] = ['PIX', 'Cartão de Crédito', 'Cartão de Débito', 'Boleto Bancário'];
   methodIcon: string[] = [
     'assets/images/payments/icons/PIX.svg',
@@ -80,5 +82,9 @@ export class PaymentComponent implements OnInit {
 
   getMethodIcon(methodNumber: number): string {
     return this.methodIcon[methodNumber];
+  }
+
+  openDialog(): void {
+    this.dialog.open(ThankYouModalComponent);
   }
 }

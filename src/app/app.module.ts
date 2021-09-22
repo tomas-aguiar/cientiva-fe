@@ -33,6 +33,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import {MatOptionModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ThankYouModalComponent } from './pages/payment/thank-you-modal/thank-you-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     ProjectCardComponent,
     FooterComponent,
     ProjectPageComponent,
-    PaymentComponent
+    PaymentComponent,
+    ThankYouModalComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     MatOptionModule,
     MatDatepickerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [MatTabNav],
   bootstrap: [AppComponent]
